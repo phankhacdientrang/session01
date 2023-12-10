@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo Form đơn giản</title>
+</head>
+<body>
+    <form action="" style="width: 350px;border-style: groove;">
+        <p style="background-color: rgb(255, 94, 0); color:white; margin-top: 0.2px" align="center" >SỞ THÍCH CỦA BẠN</p>
+
+        <label style="color: blue;" for="yourname">Họ và tên</label>
+        <input type="text" name="yourname" id="yourname" required><br>
+        <br>
+        <label for="email" style="margin-left: 28px; color:blue">Emai</label>
+        <input type="email" name="email" id="email" required><br>
+        <br>
+        <label for="favorit" style="margin-left: 10px;color: blue;">Sở thích</label>
+        <input  type="checkbox" name="thethao" value="thethao"><label style="margin-right: 15px;color: orange;">Thể thao</label>
+        <input type="checkbox" name="amnhac" value="amnhac"><label style="margin-right: 15px; color: orange;">Âm nhạc</label>
+        <input type="checkbox" name="docsach" value="docsach" ><label style="color: orange;">Đọc sách</label>
+        <br>
+        <input type="checkbox" name="luotweb" value="luotweb" style="margin-left: 71px;"><label style="margin-right: 10px; color: orange;">Lướt web</label>
+        <input type="checkbox" name="choigame" value="choigame"><label style="margin-right: 3px;color: orange;">Chơi game</label>
+        <input type="checkbox" name="dienanh" value="dienanh"><label style="color: orange;">Điện ảnh</label>
+        <br>
+        <input type="checkbox" name="dulich" value="dulich" style="margin-left: 71px;"><label style="color: orange;">Du lịch</label>
+        <br><br>
+
+        <input type="submit" value="Gửi thông tin" style="margin-left: 65px;margin-bottom: 15px;">
+        <input type="reset" value="Nhập lại">
+    </form>
+
+    <form action="" style="margin-top: 100px; border-style: groove; width: 350px;background-color: rgb(228, 231, 145);">
+        <p style="background-color: aquamarine; color:blue ; margin-top: 0.2px" >ĐĂNG KÍ HỌC VIÊN</p>
+        <div style="margin-left: 10px;">
+            <label for="fullname" style="margin-right:18px; color:blue" >Họ và tên</label>
+            <input type="text" name="fullname" id="fullname" required><br>
+            <br>
+            <label for="brday" style="margin-right:15px;color:blue">Ngày sinh</label>
+            <input type="date" name="brday" id="brday"><br>
+            <br>
+            <label style="color: blue;" for="gender">Giới tính:</label><br>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Nam</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Nữ</label>
+            <br><br>
+            <label for="address" style="margin-right:34px; color:blue;">Địa chỉ</label><br>
+            <textarea style="margin-left: 85px; margin-top:0px" name="address" id="address" rows="3"></textarea><br>
+            <br>
+            <label for="class" style="margin-right:55px; color:blue">Lớp</label>
+                <select name="class" id="class" style="width: 90px;">
+                    <option value="class0">-chọn lớp-</option>
+                    <option value="class1">Lớp 1</option>
+                    <option value="class2">Lớp 2</option>
+                    <option value="class3">Lớp 3</option>
+                </select>
+            <br><br>
+            <label for="email1" style="margin-right:42px; color:blue">Email</label>
+            <input type="email" name="email1" id="email1" required><br>
+            <br>
+            <label for="phone" style="margin-right:12px; color:blue">Điện thoại</label>
+            <input type="tel" name="phone" id="phone">
+            <br><br>
+            <input style="margin-bottom: 15px;margin-left: 80px;" type="submit" value="Đăng ký">
+            <input type="reset" value="Nhập lại">
+        </div>
+        
+    </form>
+</body>
+</html>

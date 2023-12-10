@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Tạo bảng(quản lú sinh viên, quản lý sản phẩm)
+        Cách tạo bảng
+        Nhớ các thẻ, thuộc tính
+        Caption: để mô tả bảng
+        tr : hiển thị dòng trong bảng
+        td : hiển thị cột trong bảng(có thể td*4 sẽ ra 4 cái)
+        border : đường viên dành cho hàng và cột trong bảng 
+        ******
+        Những thuộc tính thêm
+        -align: "center": căn giữa 
+                "left": căn đầu lề bên trái
+                "right": căn ra đầu lề bên phải
+        -cellpadding: khoảng cách từ viền của ô so với text
+        -cellspacing: khoảng cách từ viền của ô so với viền của bảng
+        -colspan: để gộp các cột lại với nhau, gộp từ trái sang phải.
+        -rowspan: để gộp các hàng lại với nhau
+        -bgcolor: set màu cho cho cột or cho hàng
+
+        -->
+
+        <table border="1" cellpadding="3" cellspacing="5">
+            <caption>Danh sách học viên</caption>
+            <thead>
+                <!-- phần đầu -->
+                <tr bgcolor="green">
+                    <th>Id học sinh</th>
+                    <th>Tên đăng nhập</th>
+                    <th>Họ tên</th>
+                    <th>TT làm bài</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!--phần thân -->
+                <tr>
+                    <td align="centrer">342</td>
+                    <td bgcolor="yellow">vinh2323</td>
+                    <td>Huỳnh Đức Văn</td>
+                    <td>Làm bài đủ</td>
+                </tr>
+                <tr>
+                    <td>3422</td>
+                    <td>vinh2323</td>
+                    <td>Huỳnh Đức Văn Vinh</td>
+                    <td>Làm bài đủ</td>
+                </tr>
+                <tr>
+                    <td>3412</td>
+                    <td>vinh2323</td>
+                    <td>Huỳnh Đức</td>
+                    <td>Làm bài đủ</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <!-- phần cuối -->
+                <tr>
+                    <td>Tổng số sinh viên nam</td>
+                    <td colspan="3">2</td>
+                </tr>
+            </tfoot>
+        </table>
+</body>
+</html>

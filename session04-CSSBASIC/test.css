@@ -1,0 +1,10 @@
+/*  color: dùng để tạo màu cho text hoặc chữ
+    color: key or property
+    red  : được gọi là giá trị (value)
+    RED : có thể để tên theo tiếng anh (red, blu, black,white...)
+    RGB : (RED,GREEN,BLUE)
+    RGBA : (RED,GREEN,BLUE,ALPHA) anpha chạy từ 0 đén 1
+    # : mã màu hexa
+    hsla : hue saturation lightness anpha
+    (đỏ ,da cam ,vàng ,lục, lam, chàm, tím)
+ */

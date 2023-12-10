@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey khách hàng</title>
+    <style>
+        td, th {
+            border: 1px solid #c1c0c0;
+            padding: 7px;
+        }
+        tr:nth-last-child(even) {
+            background-color: #e8e8e8;
+        }
+    </style>
+</head>
+<body>
+    <form action="" style="border-style: groove;width: 1000px;">
+        <div style="border-bottom: 1px solid #c9c2c2; padding-bottom: 1px;">
+            <h2 style="margin-left: 10px;">Market Research Survey</h2>
+            <p style="margin-left: 10px;">Please take a few moments to complete this saticfaction survey</p>
+        </div>
+        <div style="margin-left: 10px;margin-top: 10px;">
+            <label for="ageranger"><strong>What is your age ranger?</strong></label><br>
+            <select name="ageranger" id="ageranger" style="width: 400px; margin-top: 5px;">
+                <option value="14-17">14-17</option>
+                <option value="18-24">18-24</option>
+            </select><br>
+            <br>
+
+            <label for="incomeranger"><strong>What is your yearly income ranger?</strong></label><br>
+            <select name="incomeranger" id="incomeranger" style="width: 400px;margin-top: 5px;">
+                <option value="0-25000">$0 - $25,000</option>
+                <option value="25000-30000">$25,000 - $30,000</option>
+            </select>
+            <br>
+            <br>
+
+            <label><strong>Gender Identity</strong></label><br>
+                <input type="radio" name="gender" value="male" style="margin-top: 5px;"><label style="margin-left: 10px;">Male</label><br>
+                <input type="radio" name="gender" value="female" style="margin-top: 8px;"><label style="margin-left: 10px;">Female</label><br>
+                <input type="radio" name="gender" value="male" style="margin-top: 8px;"><label style="margin-left: 10px;">Male</label><br>
+                <input type="radio" name="gender" value="other" style="margin-top: 8px;"><label style="margin-left: 10px;">Other</label><br>
+                <input type="text" style="margin-left: 20px;margin-top: 8px;"><br>
+            <br>
+            <label><strong>Which of the following products have your purchased in the last 2 months. Please check all that aplly.</strong></label><br>
+                <input type="checkbox" name="product" value="product1" style="margin-top: 5px;"><label style="margin-left: 10px;">Product 1</label><br>
+                <input type="checkbox" name="product" value="product2" style="margin-top: 8px;"><label style="margin-left: 10px;">Product 2</label><br>
+                <input type="checkbox" name="product" value="product3" style="margin-top: 8px;"><label style="margin-left: 10px;">Product 3</label><br>
+            <br>
+
+            <label><strong>How often would you use our new product?</strong></label><br>
+                <input type="radio" name="often" value="daily" style="margin-top: 5px;"><label style="margin-left: 10px;">Daily</label><br>
+                <input type="radio" name="often" value="weekly" style="margin-top: 8px;"><label style="margin-left: 10px;">Weekly</label><br>
+                <input type="radio" name="often" value="monthly" style="margin-top: 8px;"><label style="margin-left: 10px;">Monthly</label><br>
+            <br>
+
+            <label><strong>What would you pay for the new product?</strong></label><br>
+                $  <input type="number" name="dollars" style="width: 80px;margin-top: 5px;"> <strong>.</strong> <input type="number" name="cents" style="width: 20px;"> 
+                <br><span style="margin-left: 12px;">Dollars</span> <span style="margin-left: 50px;">Cents</span>
+                <br><br>
+            <label for="describe"><strong>What features would you like to see in the new product.</strong></label><br>
+                <textarea name="describe" id="describe" style="width: 970px; height: 150px;margin-top: 5px;"></textarea>
+            <br><br>
+            <table style="width: 970px;border-collapse: collapse;">
+                <p>Please rate your level of agreement with the following statements.</p>
+                <tbody>
+                    <tr align="center">
+                        <td></td>
+                        <td style="width: 140px;">Strongly Disagree</td>
+                        <td style="width: 140px;">Disagree</td>
+                        <td style="width: 140px;">Agree</td>
+                        <td style="width: 140px;">Strongly Agree</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Our Product are priced fairly.</strong></td>
+                        <td align="center"><input type="radio" name><br>1</td>
+                        <td align="center"><input type="radio" name><br>2</td>
+                        <td align="center"><input type="radio" name><br>3</td>
+                        <td align="center"><input type="radio" name><br>4</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Our Product are high quality.</strong></td>
+                        <td align="center"><input type="radio" name><br>1</td>
+                        <td align="center"><input type="radio" name><br>2</td>
+                        <td align="center"><input type="radio" name><br>3</td>
+                        <td align="center"><input type="radio" name><br>4</td>
+                    </tr>
+                    <tr>
+                        <td><strong>You would recommend our product to a fried or coworker</strong></td>
+                        <td align="center"><input type="radio" name><br>1</td>
+                        <td align="center"><input type="radio" name><br>2</td>
+                        <td align="center"><input type="radio" name><br>3</td>
+                        <td align="center"><input type="radio" name><br>4</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <input type="submit" value="Submit" style="margin-bottom: 15px;">
+        </div>
+    </form>
+</body>
+</html>
