@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <style>
+    .container {
+      position: relative;
+      width: 200px;
+    }
+    .input{
+      width: 180px;
+    }
+    .icon {
+      position: absolute;
+      top: 17px;
+      right: 20px;
+
+    }
+  </style>
+  <!-- class là. -->
+  
+  <body>
+    <!-- 
+        position: định vị, vị trí các khối
+        1. static: trạng thái mặc định
+        2.relative: vị trí tương đối
+        3.absolute: vị trí tuyệt đối
+        4.fixed: khi lướt vẫn giữ header
+        5.sticky: khi lướt nó vẫn giữ và chạy theo
+        
+
+        2.RELATIVE
+        -Khi 1 element có thuộc tính position là relative thì nó sẽ lấy
+        vị trí ban đầu của nó làm gốc.
+        -Muốn căn chỉnh khối thì căn chỉnh các thuộc tính :
+                1.cách trái: left
+                2.cách phải: right
+                3.cách trên: top
+                4.cách dưới: bottom
+
+        3.ABSOLUTE
+        -Nó sẽ ăn theo thằng cha chứa nó gần nhất có thuộc tính là position.
+        -Nếu không có thằng cha chứa nó thõa mãn thì ăn theo kích thước màn hình.
+     -->
+     <form action="">
+      <div class="container">
+        <label for="name">Username:</label>
+        <input type="text" name="name" class="input">
+        <div class="icon">
+          <span class="material-symbols-outlined">
+            visibility
+            </span>
+        </div>
+      </div>
+     </form>
+    
+  </body>
+</html>
