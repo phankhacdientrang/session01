@@ -16,35 +16,35 @@
         height: 70vh; /* Thiết lập chiều cao là 100% của viewport height */
     }
     .container1 {
+        position: relative;
         display: flex;
         flex-direction: row;
         justify-content: center;
         height: 100px;
         margin-top: 150px;
-
-        
+        align-items: center;
     }
     .item1{
-        display: flex;
-        align-items: center;
+
         color: white;
         font-size: 40px;
 
     }
     .container2 {
+        position: relative;
         display: flex;
         flex-direction: row;
         justify-content: center;
         height: 100px;
+        align-items: center;
         
     }
     .item2{
-        display: flex;
-        align-items: center;
         color: white;
         font-size: 25px;
     }
     .container3 {
+        position: relative;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -54,14 +54,12 @@
         
     }
     .item3{
-        display: flex;
-        align-items: center;
-        justify-content: center;
         color: white;
-        font-size: 30px;
+        font-size: 29px;
         height: 40px;
-        width: 470px;
+        width: 488px;
         background-color: orangered !important;
+        border-radius: 7px;
 
     }
 </style>
@@ -71,11 +69,11 @@
     </div>
 
     <div class="container2">
-        <div class="item2">Get it now for just $10! the price will be increased after 50 download</div>
+        <div class="item2">Get it now for just $10! the price will be increased after 50 downloads</div>
     </div>
 
     <div class="container3">
-        <div class="item3">Get the latest version of Bootslander</div>
+        <button class="item3">Get the latest version of Bootslander</button>
     </div>
 </body>
 </html>
