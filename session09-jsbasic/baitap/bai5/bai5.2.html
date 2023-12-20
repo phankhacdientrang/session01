@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=6;
+        let result= ++a /* a = 7 cộng 1 vào a lúc đầu */
+                    + a /* a = 7 giá trị a giữ nguyên */
+                    + a++ /* a = 7 giá trị vẫn là 7 */
+                    + ++a /* sau bước này giá trị a bằng a = 8 sau đó cộng 1 vào a = 9  */
+                    + a /* a = 9 giá trị a giữ nguyên */
+        console.log(result); //39
+    </script>
+</body>
+</html>

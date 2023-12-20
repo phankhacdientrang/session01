@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(0 && 1 && "Rikkei Academy" &&null);
+        /*
+            && (and): Nó sẽ lấy falsy đầu tiên nếu không có lấy thằng cuối cùng
+                0 : falsy đầu tiên nên được lấy
+                1 : trusthy
+                "Rikkei Academy" : trusthy
+                null : falsy
+        */
+
+        console.log(2 && NaN && false && null);
+        /*
+            && (and): Nó sẽ lấy falsy đầu tiên nếu không có lấy thằng cuối cùng
+                2 : trusthy
+                NaN : falsy dầu tiên nên được lấy
+                false : falsy
+                null : falsy
+        */
+
+        console.log(3 && 1 && 5 && null);
+        /*
+            && (and): Nó sẽ lấy falsy đầu tiên nếu không có lấy thằng cuối cùng
+                3 : trusthy
+                1 : trusthy
+                5 : trusthy
+                null : falsy đầu tiên nên được lấy
+        */
+
+        console.log("1" && undefined && 5 && NaN);
+        /*
+            && (and): Nó sẽ lấy falsy đầu tiên nếu không có lấy thằng cuối cùng
+                "1" : trusthy
+                undefiend : falsy dầu tiên nên được lấy
+                5 : trusthy
+                NaN : falsy
+        */
+
+        console.log(1 && null && 12 && NaN);
+        /*
+            && (and): Nó sẽ lấy falsy đầu tiên nếu không có lấy thằng cuối cùng
+                1 : trusthy
+                null : falsy dầu tiên nên được lấy
+                12 : trusthy
+                null : falsy
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Variable(biến): là từ khóa dùng để khai biến các dữ liệu.
+        3 từ khóa dùng để khai báo biến
+        Code chạy từ trên xuống dưới,lỗi ở đâu, dừng ở đó.
+            +var
+                +có thể khai báo lại
+                +có thể gán lại giá trị
+                +phạm vi hoạt động function
+                +có hoisting truy cập dc
+            +let
+                +không thể khai báo lại
+                +có thể gán lại giá trị
+                +phạm vi hoạt động block - scope
+                +có hoisting nhưng không truy cập đc
+            +const: thường dùng để khai báo hằng số
+                +không thể khai báo lại
+                +không thể gán lại giá trị
+                +phạm vi hoạt động là block - scope
+                +có hoisting nhưng không truy cập đc.
+                +Khi khai báo bắt buộc phải gán giá trị cho nó.
+            fullName: là tên biến
+            -Có phân biệt hoa thường
+            -Đặt tên theo quy tắc camel-case (quy tắc con lạc đà)
+            -Không được bắt đầu bằng số, chữ cái đặc biệt (trừ $,_)
+            -tránh đặt tên trùng từ khóa đặc biệt trong js(class, let, var,const, try, catch...)
+            = : gán giá trị(chứ k phải so sánh)
+            vũ hồng vân: giá trị của biến
+            Các kiểu dữ liệu
+
+     -->
+     <script>
+        var fullName = 'vũ hồng vân';
+        var fullName = 'vũ hồng minh';
+            fullName = 'vũ hồng vânnn';
+        let age=25;
+            age=30;
+        console.log(fullName);
+        console.log(age);
+        const PI=3.14;
+     </script>
+</body>
+</html>

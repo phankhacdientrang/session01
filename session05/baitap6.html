@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        height: 130px;
+        width: 100%;
+        margin-left: 0px;
+        background-color:#333;
+        display: flex;
+        justify-content: space-between;
+    }
+    .container1 {
+        display: flex;
+        position: relative;
+        left: 30px;
+        align-items: center;
+        font-size: 40px;
+        color: white;
+    }
+    .container2 {
+        display: flex;
+        position: relative;
+        align-items: center;
+        right: 30px;
+    }
+    .container3 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container4 {
+        margin-top: 40px;
+        margin-bottom: 10px;
+        
+    }
+    .container4 label,
+    .container4 input {
+        margin-top: 10px;
+    }
+    .container4 input[type="submit"]{
+        border: none;
+        height: 40px;
+        border-radius: 5px;
+        width: 70px;
+        font-size: 15px;
+        color: white;
+        background-color:black
+    }
+    input{
+        position: relative;
+        height: 30px;
+        width: 600px;
+    }
+    label {
+        position: relative;
+        font-weight: bold;
+
+    }
+    footer {
+        font-size: 13px;
+        position: absolute;
+        bottom: 10px;
+        left: 20px;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        display: inline-block;
+        margin: 0 10px;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #d56a6a;
+        background-color: #ece5e5;
+      }
+   
+</style>
+<body>
+    <div class="container">
+        <div class="container1">Hotel Search</div>
+        <div class="container2">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container3">
+        <form class="container4">
+            <div style="font-size: 24px; text-align: center; font-weight: bold;">Find the Perfect Hotel for You</div>
+            <label for="input1">Destination:</label>
+            <br>
+            <input type="text" name="input1" id="input1" required>
+            <br>
+            <label for="date1">Check-in:</label><br>
+            <input type="date" name="date1" required>
+            <br>
+            <label for="date2">Check-in:</label><br>
+            <input type="date" name="date2" required>
+            <br>
+            <label for="number">Guests:</label><br>
+            <input type="number" name="number" id="number" required>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <footer>
+        <p>&copy;2023 Hotel Search. All rights reserved.</p>
+    </footer>
+</body>
+</html>
