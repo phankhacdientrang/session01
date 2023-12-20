@@ -11,7 +11,7 @@
         /* ||(or) lấy trusthy đầu tiên nếu không có lấy cuối cùng
             0 : falsy
             NaN : falsy
-            "Rikkei Academy" sẽ được lấy
+            "Rikkei Academy" ==>lấy vì trusthy
             null : falsy 
         */
 
@@ -20,13 +20,13 @@
             null : falsy
             NaN : falsy
             false : falsy
-            null : falsy  sẽ lấy vì không có trusthy đầu tiên
+            null : falsy ==> lấy vì không có trusthy đầu tiên
         */
        
         console.log(undefined || 1 || 5 || null);
         /* ||(or) lấy trusthy đầu tiên nếu không có lấy cuối cùng
             undefined : falsy
-            1 : trusthy sẽ được lấy vì là trusthy đầu tiên
+            1 : trusthy ==> lấy vì là trusthy đầu tiên
             5 : trusthy
             null : falsy 
         */
@@ -35,13 +35,13 @@
         /* ||(or) lấy trusthy đầu tiên nếu không có lấy cuối cùng
             "" : falsy
             null : falsy
-            5 : sẽ được lấy vì là trusthy đầu tiên
+            5 : ==> lấy vì là trusthy đầu tiên
             NaN : falsy 
         */
         
         console.log(1 || null || 12|| NaN);
         /* ||(or) lấy trusthy đầu tiên nếu không có lấy cuối cùng
-            1 : trusthy đầu tiên nên sẽ được lấy
+            1 :  lấy vì trusthy đầu tiên 
             null : falsy
             12 : trusthy
             NaN : falsy 
