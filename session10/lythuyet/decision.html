@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        DECISION: câu điều kiện
+        if-
+        -Đối với if (condition) THÕA MÃN thì if được thực thi
+        -Thế nào là thỏa mãn: là trusthy thì chạy
+        -if-else
+        Một trong 2 cái bắt buộc phải chạy 1 cái
+        -if-else-if
+        -switch-else
+
+     -->
+     <script>
+        /*let a=4;
+        if(a>5){
+            // tem plate literial
+            // có thể truyền biến vào trong string
+            console.log(`${a} lớn hơn 5`);
+        }*/
+
+        /*let a=4;
+        if(a>3){ //nếu thay >5 nó chạy vào else
+            // tem plate literial
+            // có thể truyền biến vào trong string
+            console.log(`${a} lớn hơn 3`);
+        }else{
+            console.log("chạy vào else");
+        }*/
+        /*let day = prompt("Mời bạn nhập ngày trong tuần");
+        if(day==2){
+            console.log("thứ 2");
+        }else if(day == 3){
+            console.log("thứ 3");
+        }else if(day == 4){
+            console.log("thứ 4");
+        }else{
+            console.log("không phải thứ 2,3");
+        }*/
+
+
+        /*let day = Number(prompt("Mời bạn nhập ngày trong tuần"));// ép kiểu dữ liệu từ string sang number.
+        // key là giá trị truyền vào
+        // break thoát khỏi key.
+        switch (day) {
+            //case sẽ đi kiểm tra value có bằng key không
+            case 2:
+                // các case kiểm tra === kiểm tra nghiêm ngặt
+                console.log("ngày thứ 2");
+                break;
+            case 3:
+            console.log("ngày thứ 3");
+                break;
+            case 4:
+                console.log("ngày thứ 4");
+                break;
+            default:
+                console.log("ngày không thỏa mãn");
+        }*/
+
+        let day = Number(prompt("Mời bạn nhập ngày trong tuần"));// ép kiểu dữ liệu từ string sang number.
+        switch (day) {
+            case 2:
+            case 4: 
+            case 6:
+                console.log("ngày đi học");
+                break;
+            default:
+                console.log("ngày không thỏa mãn");
+        }
+     </script>
+</body>
+</html>
