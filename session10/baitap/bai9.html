@@ -6,6 +6,40 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        // Sử dụng hàm prompt để nhập điểm từ người dùng cho từng môn học
+        let diemToan = prompt("Nhập điểm môn Toán:");
+        let diemLi = prompt("Nhập điểm môn Lí:");
+        let diemHoa = prompt("Nhập điểm môn Hóa:");
+        let diemVan = prompt("Nhập điểm môn Văn:");
+        let diemSu = prompt("Nhập điểm môn Sử:");
+        let diemDia = prompt("Nhập điểm môn Địa:");
+
+        // Chuyển đổi giá trị nhập vào thành số thập phân
+        diemToan = parseFloat(diemToan);
+        diemLi = parseFloat(diemLi);
+        diemHoa = parseFloat(diemHoa);
+        diemVan = parseFloat(diemVan);
+        diemSu = parseFloat(diemSu);
+        diemDia = parseFloat(diemDia);
+
+        // Tính điểm trung bình
+        let diemTrungBinh = (diemToan + diemLi + diemHoa + diemVan + diemSu + diemDia) / 6;
+
+        // Hiển thị điểm trung bình
+        console.log("Điểm trung bình các môn học: " + diemTrungBinh.toFixed(2));
+
+        // Xác định và hiển thị xếp loại
+        if (diemTrungBinh >= 8.0 && diemTrungBinh <= 10) {
+            console.log("Xếp loại: GIỎI");
+        } else if (diemTrungBinh >= 6.5 && diemTrungBinh <= 7.9) {
+            console.log("Xếp loại: KHÁ");
+        } else if (diemTrungBinh >= 5.0 && diemTrungBinh <= 6.4) {
+            console.log("Xếp loại: TRUNG BÌNH");
+        } else {
+            console.log("Xếp loại: YẾU");
+        }
+
+    </script>
 </body>
 </html>
