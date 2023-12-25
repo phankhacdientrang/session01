@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers = [1, 5, 8, 7, 9, 6, 5, 41, 2, 6, 55, 4, 8];
+
+        // Sắp xếp mảng theo thứ tự tăng dần
+        numbers.sort(function(a, b) {
+        return a - b;
+        });
+
+        // In ra mảng sau khi sắp xếp
+        console.log("Mảng sau khi sắp xếp: " + numbers);
+
+        //Trong hàm so sánh function(a, b) { return a - b; },
+        // nếu a nhỏ hơn b, trả về giá trị âm (ở đây là a - b);
+        // nếu a lớn hơn b, trả về giá trị dương; nếu cả hai bằng nhau,
+        // trả về 0. Khi sử dụng sort() với hàm so sánh này, mảng sẽ được
+        // sắp xếp theo thứ tự tăng dần.
+
+
+    </script>
+</body>
+</html>

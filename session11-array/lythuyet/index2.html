@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Các phương pháp làm việc với chuỗi(text):
+        1.split(): cắt chuỗi thành mảng
+        2.join(): gộp các phần tử trong mảng thành chuỗi
+        Các phương thức thêm để làm việc với mảng
+        1. reverse():đảo ngược các phần tử trong mảng
+        2.sort(): sắp xếp các phần tử trong mảng theo bảng mã assci
+        3.indexof(): kiểm tra phần tử có trong mảng hay không
+            -Nếu có trả về vị trí
+            -Nếu không có trả về -1
+        4.include: kiểm tra phần tử có trong mảng hay không
+            - nếu có trả về true
+            - Nếu không trả về false.
+        5.slice: sao chép ra 1 cái mảng mới không liên quan đến mảng ban đầu
+
+     -->
+    <script>
+        let text = "hello jst11"
+        let result = text.split(" ");// sau khi cách thì thành 2 phần tử
+        let a = result.join("-")
+        console.log(a);
+
+        let students=["vân","hoa", "hồng","mai","an","thúy"]
+        let newStudents=students.slice(1,3);
+        console.log(newStudents);
+            // students.reverse();// đảo mảng
+            // students.sort();
+            // console.log("students", students);
+            // kiểm tra xem trong mảng của mình có hoa hay không
+            // let check = students.indexof(hoa1);
+            let check = students.includes("hoa");
+
+    </script>
+</body>
+</html>

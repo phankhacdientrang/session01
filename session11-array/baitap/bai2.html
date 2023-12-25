@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chèn dấu (-) giữa số chẵn</title>
+</head>
+<body>
+
+  <script>
+    function chenDauHyphen() {
+      // Nhập số từ người dùng
+      var soNhapVao = parseInt(prompt("Nhập số:"));
+
+      // Chuyển số thành chuỗi để dễ xử lý từng chữ số
+      var chuoiSo = soNhapVao.toString();
+      var ketQua = "";
+
+      // Duyệt qua từng chữ số trong chuỗi
+      for (var i = 0; i < chuoiSo.length; i++) {
+        // Chèn dấu (-) giữa hai số chẵn (nếu có)
+        ketQua += chuoiSo[i];
+        if (i < chuoiSo.length - 1) {
+          // Kiểm tra nếu hai số liên tiếp đều là chẵn
+          if (parseInt(chuoiSo[i]) % 2 === 0 && parseInt(chuoiSo[i + 1]) % 2 === 0) {
+            ketQua += "-";
+          }
+        }
+      }
+
+      // In kết quả
+      alert("Kết quả sau khi chèn dấu (-): " + ketQua);
+    }
+
+    // Gọi hàm khi trang web được tải
+    chenDauHyphen();
+  </script>
+
+</body>
+</html>

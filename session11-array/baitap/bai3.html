@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let numbers = [1, 5, 8, 7, 9, 6, 5, 41, 2, 6, 55, 4, 8];
+
+      // Khởi tạo biến maxNumber với giá trị đầu tiên của mảng
+      let maxNumber = numbers[0];
+
+      // Sử dụng vòng lặp để so sánh từng phần tử với maxNumber
+      for (let i = 1; i < numbers.length; i++) {
+        if (numbers[i] > maxNumber) {
+          maxNumber = numbers[i];
+        }
+      }
+      // In ra số lớn nhất
+      console.log("Số lớn nhất trong mảng là: " + maxNumber);
+    </script>
+  </body>
+</html>

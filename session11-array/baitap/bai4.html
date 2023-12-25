@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chuyển đổi chữ thường và chữ hoa</title>
+</head>
+<body>
+
+  <script>
+    function chuyenDoiChuHoaChuThuong() {
+      // Nhập chuỗi từ người dùng
+      var chuoiNhap = prompt("Nhập chuỗi:");
+
+      // Chuyển đổi các ký tự trong chuỗi
+      var chuoiChuyenDoi = "";
+      for (var i = 0; i < chuoiNhap.length; i++) {
+        var kyTu = chuoiNhap[i];
+
+        if (kyTu === kyTu.toUpperCase()) {
+          // Nếu là chữ hoa, chuyển thành chữ thường
+          chuoiChuyenDoi += kyTu.toLowerCase();
+        } else {
+          // Nếu là chữ thường, chuyển thành chữ hoa
+          chuoiChuyenDoi += kyTu.toUpperCase();
+        }
+      }
+
+      // In kết quả
+      alert("Chuỗi sau khi chuyển đổi: " + chuoiChuyenDoi);
+    }
+
+    // Gọi hàm khi trang web được tải
+    chuyenDoiChuHoaChuThuong();
+  </script>
+
+</body>
+</html>

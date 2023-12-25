@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function daoNguocMangKyTu() {
+          // Nhập mảng ký tự từ người dùng
+          var mangKyTu = prompt("Nhập mảng ký tự (cách nhau bởi dấu phẩy):").split('');
+    
+          // Sử dụng hàm reverse() để đảo ngược mảng
+          var mangDaoNguoc = mangKyTu.reverse();
+    
+          // In kết quả
+          alert("Mảng sau khi đảo ngược: " + mangDaoNguoc.join(""));
+        }
+    
+        // Gọi hàm khi trang web được tải
+        daoNguocMangKyTu();
+      </script>
+</body>
+</html>
