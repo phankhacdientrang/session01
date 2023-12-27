@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let todoList = [];
+
+      while (true) {
+        let input = prompt("Nhập lựa chọn (C/R/U/D/E): ");
+
+        switch (input.toUpperCase()) {
+          case "C":
+            let work = prompt("Thêm công việc bạn muốn: ");
+            todoList.push(work);
+            console.log("Danh sách công việc sau khi thêm:", todoList);
+            break;
+          case "R":
+            console.log("Danh sách công việc:");
+            for (let i = 0; i < todoList.length; i++) {
+              console.log(`${i + 1}. ${todoList[i]}`);
+            }
+            break;
+          case "U":
+            let updateIndex = prompt(
+              "Chọn vị trí công việc bạn muốn cập nhật: "
+            );
+            let updateContent = prompt("Nhập nội dung mới: ");
+            if (updateIndex >= 1 && updateIndex <= todoList.length) {
+              todoList[updateIndex - 1] = updateContent;
+              console.log("Danh sách công việc sau khi cập nhật:", todoList);
+            } else {
+              console.log("Vị trí không hợp lệ.");
+            }
+            break;
+          case "D":
+            let deleteIndex = prompt("Chọn vị trí công việc bạn muốn xóa: ");
+            if (deleteIndex >= 1 && deleteIndex <= todoList.length) {
+              todoList.splice(deleteIndex - 1, 1);
+              console.log("Danh sách công việc sau khi xóa:", todoList);
+            } else {
+              console.log("Vị trí không hợp lệ.");
+            }
+            break;
+          case "E":
+            console.log("Chương trình kết thúc.");
+            process.exit();
+          default:
+            console.log("Lựa chọn không hợp lệ. Vui lòng thử lại.");
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
