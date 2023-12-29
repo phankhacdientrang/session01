@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function tinhTanSuatXuatHien(chuoi) {
+        let tanSuat = {};
+
+        // Lặp qua từng ký tự trong chuỗi
+        for (let i = 0; i < chuoi.length; i++) {
+          let kyTu = chuoi[i];
+
+          // Nếu ký tự đã xuất hiện, tăng tần suất lên 1
+          if (tanSuat[kyTu]) {
+            tanSuat[kyTu]++;
+          } else {
+            // Nếu ký tự chưa xuất hiện, đặt tần suất là 1
+            tanSuat[kyTu] = 1;
+          }
+        }
+
+        return tanSuat;
+      }
+
+      // Nhập chuỗi từ người dùng
+      let chuoiNhap = prompt("Nhập chuỗi kí tự:");
+
+      // Kiểm tra và in kết quả
+      if (chuoiNhap) {
+        let ketQua = tinhTanSuatXuatHien(chuoiNhap);
+
+        console.log("Tần suất xuất hiện của mỗi ký tự:");
+        for (let kyTu in ketQua) {
+          console.log(`${kyTu}: ${ketQua[kyTu]} lần`);
+        }
+      } else {
+        console.log("Chuỗi không hợp lệ.");
+      }
+    </script>
+  </body>
+</html>
