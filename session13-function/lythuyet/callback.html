@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        call back
+        là 1 hàm đc truyền làm tham số của hàm khác
+     -->
+     <script>
+        console.log("111");
+        setTimeout(() => {
+            console.log("2222")
+        }, 1000);// 1000ms=1s
+        console.log("3333");
+
+        let sdt;
+        function xinSoDt(params) {
+            console.log("Chung gọi kiên xin sdt Vanh")
+            console.log("Kiên bảo đợi tí");
+            setTimeout(() => {
+                console.log("đã tìm thấy số");
+                sdt = 12345;
+                callback11(sdt);
+            }, 5000);
+
+        }
+        function khiCoSoVanAnhMoiGoi(sdtVanAnh) {
+            console.log("gọi cho Vanh theo số", sdtVanAnh);
+
+        }
+        xinSoDt(khiCoSoVanAnhMoiGoi);
+     </script>
+</body>
+</html>

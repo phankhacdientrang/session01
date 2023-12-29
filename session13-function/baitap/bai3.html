@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function tinhGiaiThua(n) {
+        if (n === 0 || n === 1) {
+          return 1; // Giai thừa của 0 và 1 là 1
+        } else {
+          return n * tinhGiaiThua(n - 1); // Sử dụng đệ quy để tính giai thừa
+        }
+      }
+
+      // Thực thi hàm với một số nguyên cụ thể
+      let soCanTinhGiaiThua = 5;
+      let ketQua = tinhGiaiThua(soCanTinhGiaiThua);
+
+      console.log(`Giai thừa của ${soCanTinhGiaiThua} là: ${ketQua}`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function timSoBeNhat(so1, so2, so3) {
+        return Math.min(so1, so2, so3);
+      }
+
+      function main() {
+        // Nhập ba số từ người dùng
+        let so1 = prompt("Nhập số thứ nhất:");
+        let so2 = prompt("Nhập số thứ hai:");
+        let so3 = prompt("Nhập số thứ ba:");
+        
+        // Gọi hàm kiểm tra để tìm số bé nhất
+        let soBeNhat = timSoBeNhat(so1, so2, so3);
+        console.log(
+          `Số bé nhất trong ba số ${so1}, ${so2}, ${so3} là: ${soBeNhat}`
+        );
+      }
+      // Gọi hàm main
+      main();
+    </script>
+  </body>
+</html>
