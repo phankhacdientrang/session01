@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function isPrime(num) {
+        if (num <= 1) return false;
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+          if (num % i === 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      function sumOfPrimes(inputString) {
+        let numbers = inputString.split(" ").map(Number);
+        let sum = 0;
+
+        for (let i = 0; i < numbers.length; i++) {
+          if (isPrime(numbers[i])) {
+            sum += numbers[i];
+          }
+        }
+
+        return sum;
+      }
+
+      // Ví dụ sử dụng
+      let inputString = prompt(
+        "Nhập vào một chuỗi số nguyên, cách nhau bởi dấu cách:"
+      );
+      let result = sumOfPrimes(inputString);
+
+      alert("Tổng các số nguyên tố trong chuỗi là: " + result);
+    </script>
+  </body>
+</html>

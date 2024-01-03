@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function removeNumbers(inputString) {
+            // Sử dụng biểu thức chính quy để xóa ký tự số
+            let stringWithoutNumbers = inputString.replace(/\d/g, '');
+        
+            return stringWithoutNumbers;
+        }
+        
+        // Ví dụ sử dụng
+        let inputString = prompt("Nhập vào một chuỗi ký tự bao gồm chữ và số:");
+        let result = removeNumbers(inputString);
+        
+        alert("Chuỗi ký tự sau khi xóa số là: " + result);
+        
+    </script>
+</body>
+</html>

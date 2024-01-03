@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function findMaxUniqueNumber() {
+     
+        let inputString = prompt("Nhập vào một chuỗi số nguyên có 5 chữ số:");
+
+        // Kiểm tra xem chuỗi có 5 chữ số không
+        if (inputString.length !== 5 || !/^\d+$/.test(inputString)) {
+          alert("Vui lòng nhập đúng một chuỗi số nguyên có 5 chữ số.");
+          return;
+        }
+
+        // Chuyển chuỗi thành mảng các chữ số
+        let digits = inputString.split("").map(Number);
+
+        // Sắp xếp mảng theo thứ tự giảm dần
+        digits.sort((a, b) => b - a);
+
+        // Tìm số lớn nhất và duy nhất
+        let maxUniqueNumber = digits[0];
+        for (let i = 1; i < digits.length; i++) {
+          if (digits[i] !== digits[i - 1]) {
+            maxUniqueNumber = digits[i];
+            break;
+          }
+        }
+
+        alert("Số lớn nhất và duy nhất: " + maxUniqueNumber);
+      }
+      findMaxUniqueNumber();
+    </script>
+  </body>
+</html>

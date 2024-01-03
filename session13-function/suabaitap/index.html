@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Nhập tên sản phẩm muốn mua" id="input">
+    <button onclick="addToCart()">Mua</button>
+    <script>
+        let cart = [];
+
+        function addToCart() {
+            let inputValue = document.getElementById("input").value;
+            let store = [["pc",5000],["banhmi",2000],["ao",3000]];
+            let check = false;
+
+            for (let i = 0; i < store.length; i++) {
+                if (store[i][0] == inputValue) {
+                    cart.push(store[i]);
+                    check = true;
+                    break; 
+                }
+            }
+
+            if (check === true) {
+                console.log("Sản phẩm đã được thêm vào giỏ hàng:", cart);
+            } else {
+                console.log("Không có sản phẩm");
+            }
+        }
+    </script>
+</body>
+</html>

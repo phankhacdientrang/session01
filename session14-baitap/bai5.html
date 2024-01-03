@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function reverseStringWithPreservedSpaces(inputString) {
+        // Chia chuỗi thành mảng các từ sử dụng khoảng trắng làm điểm ngắn cách
+        let words = inputString.split(" ");
+
+        // Đảo ngược mỗi từ trong mảng
+        let reversedWords = words.map((word) =>
+          word.split("").reverse().join("")
+        );
+
+        // Kết hợp các từ đã đảo ngược lại thành chuỗi mới
+        let reversedString = reversedWords.join(" ");
+
+        return reversedString;
+      }
+
+      // Ví dụ sử dụng
+      let inputString = prompt("Nhập vào một chuỗi ký tự:");
+      let result = reverseStringWithPreservedSpaces(inputString);
+
+      alert("Chuỗi sau khi đảo ngược các thành phần là: " + result);
+    </script>
+  </body>
+</html>
