@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Text(nội dung trong DOM)
+        sau khi lấy element ra thì
+        1.innerHTML
+        2.innerText
+        3.textContent
+     -->
+     <h1>DOM</h1>
+     <button onclick="changeText()">changeText</button>
+     <script>
+        function changeText() {
+            // đổi nội dung thành quyết tâm học lập trình
+            // lấy element
+            let elem = document.getElementsByTagName("h1")[0];
+            elem.innerHTML="quyết tâm học lập trình"
+        }
+     </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .title{
+        background-color: red;
+    }
+    .title2{
+        color: blue;
+    }
+</style>
+<body>
+    <!-- 
+        Attribute: thuộc tính
+        - Muốn tương tác với thuộc tính đầu tiên phải lấy element ra mới tương tác được
+        - Thuộc tính classList trong đối tượng
+        classList là danh sách tất cả những class của element(đối tượng)
+            + các phương thức dùng trong classList 
+            1.add(tên_class) thêm class vào cho đối tượng
+            2.remove("tên_class") xóa tên class
+            3.toggle(như công tắc): có class thì xóa đi, không thì thêm vào
+            4.contain: kiểm tra xem đối tượng có class đấy không
+    -->
+     <div class="title1 title2">
+        Lorem is wfwfawfwafawfawf
+     </div>
+     <img src="https://cdn.pixabay.com/photo/2013/04/04/12/34/mountains-100367_1280.jpg" alt="">
+     <button onclick="changeImage()">changeImg</button>
+     <button onclick="showCloseForm()">click</button>
+     <script>
+        //đầu tiên phải lấy element
+        let element = document.getElementsByTagName("div");
+        //element[0].classList.add("titlet");
+        //element[0].classList.remove("titlet2");
+        let imgElement = document.getElementsByTagName("img")[0];
+        function showCloseForm() {
+            element[0].classList.toggle("title2")
+        }
+        function changeImage() {
+            imgElement.src = "https://cdn.pixabay.com/photo/2017/02/01/22/02/mountain-landscape-2031539_1280.jpg";
+        }
+     </script>
+</body>
+</html>

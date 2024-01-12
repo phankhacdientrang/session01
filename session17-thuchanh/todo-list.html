@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="job">
+    <button onclick="addJob()">add</button>
+
+    <table border="1" cellpadding="5" cellspacing="5">
+        <thead>
+            <th>STT</th>
+            <th>Trạng thái</th>
+            <th>Tên công việc</th>
+            <th>Action</th>
+        </thead>
+        <tbody id="tbody">
+            
+        </tbody>
+    </table>
+
+    <!-- 
+        Bước 1: Tạo giao diện khi nhấn nút add gọi hàm thêm công viêc
+        Bước 2: tạo 1 đối tượng để lưu thông tin 1 công việc
+            tại vì công việc nó sẽ gồm các thuộc tính
+            Tên công việc: để hiển thị 
+            id: công việc: thêm, sửa, xóa, thông tin công việc dựa vào id 
+        Bước 3: tạo 1 mảng lưu thông tin tất cả các đối tượng
+        Bước 4: khi nhấn nút add tạo push thông tin của đối tượng vào mảng rồi hiển thị
+
+     -->
+     <Script>
+        //tạo function sinh id ngẫu nhiên
+        function uuid(){
+            return Math.floor(Math.random()*9999999)+new Date().getMilliseconds();
+        }
+        // tạo 1 mảng lưu thông tin tất cả các đối tượng công việc
+        let jobs = [];
+        
+        /*
+            Math.random(): tạo 1 số ngẫu nhiên từ 0<=X<1
+            * với 99999999 sẽ tạo ra 1 số ngẫu nhiên
+            Math.floor làm tròn xuống .vd19.4 sẽ lấy 18
+            new Date().getMilliseconds(): lấy thời gian tính bằng (1000ms=1s)
+        */
+        //khởi tạo fuction thêm công việc
+        function addJob() {
+            console.log("đã chạy hàm job")
+            // lấy nội dung công việc
+            let job = document.getElementById("job").value;
+            console.log("nội dung công việc", job);
+            // khi khởi tạo đối tượng
+            let objInfo = {
+                name: job,
+                id:uuid()// viết hàm sinh ngẫu nhiên id
+            }
+            jobs.push(objInfo);
+            // sau khi có mảng chứa dsach công việc rồi thì đem đi hiển thị
+            renderJob();
+        }
+        // function hiển thị danh sách công việc
+        function renderJob(){
+            let html="";
+            for (let i=0; i<jobs.length; i++){
+                html += 
+                        `
+                            <tr>
+                                <td>${i+1}</td>
+                                <td>
+                                    <input onclick=clickInput() type="checkbox">
+                                </td>
+                                <td>${jobs[i].name} </td>
+                                <td> X </td>
+                            </tr>
+                        `
+            }
+            document.getElementById("tbody").innerHTML=html;
+        }
+     </Script>
+</body>
+</html>

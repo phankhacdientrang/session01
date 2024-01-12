@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label for="loginEmail">Email:</label>
+      <input type="email" id="loginEmail" required /><br />
+
+      <label for="loginPassword">Password:</label>
+      <input type="password" id="loginPassword" required /><br />
+
+      <button type="button" onclick="login()">Login</button>
+    </form>
+
+    <script>
+      // Lấy danh sách người dùng từ local storage hoặc sử dụng mảng trống nếu không tồn tại
+      let users = JSON.parse(localStorage.getItem("users")) || [];
+
+      // Hàm đăng nhập được gọi khi người dùng nhấn nút "Login"
+      function login() {
+        // Lấy giá trị từ các trường nhập liệu trong biểu mẫu đăng nhập
+        let loginEmail = document.getElementById("loginEmail").value;
+        let loginPassword = document.getElementById("loginPassword").value;
+
+        // Tìm người dùng trong danh sách với email và mật khẩu trùng khớp
+        let user = users.find(
+          (u) => u.email === loginEmail && u.password === loginPassword // u là tên biến, có thể thay đổi
+        );
+
+        // Kiểm tra kết quả tìm kiếm
+        if (user) {
+          alert("Đăng nhập thành công!");
+        } else {
+          alert("Email hoặc mật khẩu không hợp lệ.");
+        }
+      }
+    </script>
+  </body>
+</html>

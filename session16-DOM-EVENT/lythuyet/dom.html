@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        DOM: Document object model : mô hình tài liệu đối tượng
+        Khi trang web đc tải lên thì trình duyệt sẽ tạo ra 1 document object model
+        (DOM).
+        DOM gồm 3 thành phần chính
+        1.element(thẻ h1,h2,div,p,a,img...)
+        2.attribute(class,id,src,href...)
+        3.text(nội dung)
+        h1: chính là element
+        class: attribute
+        dom: text
+        Công dụng của DOM
+        JavaScript có thể thay đổi tất cả các thành phần HTML trong trang
+        JavaScript có thể thay đổi tất cả thuộc tính HTML trong trang
+        JavaScript có thể thay đổi tất cả các kiểu CSS trong trang
+        JavaScript có thể xóa các thành phần và thuộc tính HTML hiện có
+        JavaScript có thể thêm các thành phần và thuộc tính HTML mới
+        JavaScript có thể phản ứng với tất cả các sự kiện HTML hiện có trong trang
+        JavaScript có thể tạo các sự kiện HTML mới trong trang
+        ********************************************
+
+        các cách lấy element trong DOM
+        1. Lấy theo id
+            document.getElementById("tên id")
+            ==>trả về 1 đối tượng
+        2. Lấy theo class
+            document.getElementsByClassName("")
+            (Từ khóa class là dùng để khai báo lớp đối tượng)
+            ==> trả về 1 HTML colection dạng mảng
+        3. lấy theo tên thẻ
+        trả về 1 HTML colection 
+        4.lấy theo queryselector
+            Bộ chọn selector
+            Trả về 1 đối tượng
+        5. Lấy theo queryselectorAll.
+            trả về 1 NODE-list dạng mảng
+            có thể lấy theo index
+            có thể dùng for để duyệt
+            có thể dùng foreach để duyệt
+     -->
+     <h1 class="title">DOM</h1>
+     <h2 class="title">Lấy theo class</h2>
+
+     <p id="idElement">Lấy element theo id</p>
+     <p id="idElement">thẻ p 2</p>
+     <p id="selector">lấy theo selector</p>
+
+     <button onclick="changeColor()">click</button>
+     <a href=""></a>
+     <img src="" alt="">
+     <script>
+        let elementById = document.getElementById("idElement");
+            //elementById.className = "heading";
+        let elementByClass = document.getElementsByClassName("title");
+        console.log("elementByClass",elementByClass);
+        let elementByTagName = document.getElementsByTagName("p");
+        elementByTagName[0].style.color = "red";// nếu thay bằng 1 thì thẻ p2 đổi màu
+        console.log("elementByTagName",elementByTagName);
+        let elementBySelector = document.querySelector("#selector");
+        elementBySelector.style.fontSize = "100px";
+        console.log("elementBySelector",elementBySelector);
+
+        let elementBySelectorAll = document.querySelectorAll(".title");
+        console.log("elementBySelectorALL",elementBySelectorAll);
+
+        function changeColor() {
+            document.getElementsByClassName("title")[0].style.color="red";
+            document.getElementsByClassName("title")[0].innerHTML = "dom basic";
+        }
+
+        //let obj = {
+        //    name:"hoa",
+
+        //}
+        //obj.age=25 //thêm age cho obj
+     </script>
+</body>
+</html>
